@@ -9,10 +9,7 @@ The dataset consists of 1305 35x35 images of clothing items belonging to 3 class
 
  Each class contains 435 hand-selected images from the image gallery, Pinterest and bulk downloaded with *gallery-dl*. Each selection represents an unique garment from the target class either lying flat or on a hanger. The majority of the selected images were not professionally taken and were posted on Pinterest by resellers/sellers to represent their item listings on resale markets. Selecting these types of images preserves some of the variance in angles, exposures, and photo perspectives that an actual consumer would encounter when browsing listings from different sellers. The downloaded images were additionally preprocessed with *rembg* to remove noise contributed by backgrounds and *tensorflow* to remove color channels from the images, create class labels from subdirectory folder names, as well as uniformly resize all images to 35x35 pixels. The decision to remove backgrounds from the images stemmed from the reality that many of the images were not professionally taken. Images of garments were taken on top of brightly patterned bedding, grass, carpets, etc. that could create unwanted distractions from the focal point of the image. At the same time, removing backgrounds does not change the variations in lighting, angles, and photo perspectives of the actual items in the images. The images were transformed to grayscale because a garment's color or pattern does not define it's silhouette.
 
-## to Replicate
 To run this project, clone this repository which includes the target datasets "images.npy" and "labels.npy"
 - This project is a jupyter notebook which requires anaconda3/ipykernel/jupyternb
 - Install the following dependencies: numpy, matplotlib, pandas, scikit-learn, seaborn
-- Open "604finalproject.ipynb" and run from the top --> if replicating, I highly advise against re-running the GridsearchCV instances because it can take hours. Instead, the outcomes have already been saved as .csv files named throughout the code. You can read them back into the notebook for analysis with pd.read_csv("name_of_file.csv")
-
 
